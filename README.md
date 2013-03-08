@@ -4,7 +4,7 @@ This is a [Puppet](https://puppetlabs.com/puppet/what-is-puppet/) module which a
 
 ## Example
 
-```
+```puppet
 node "jenkins-master" {
   class { jenkins:
     url => "http://ci.example.com",

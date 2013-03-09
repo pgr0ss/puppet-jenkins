@@ -1,4 +1,9 @@
-class jenkins::files($slaves, $views) {
+class jenkins::files(
+  $url,
+  $email_address,
+  $slaves,
+  $views
+) {
   file { "/var/lib/jenkins/config.xml":
     ensure => file,
     owner => jenkins,

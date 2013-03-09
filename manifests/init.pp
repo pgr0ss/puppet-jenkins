@@ -1,5 +1,16 @@
-class jenkins($slaves, $views) {
-  class { "jenkins::files": slaves => $slaves, views => $views }
+class jenkins(
+  $url,
+  $email_address,
+  $slaves,
+  $views
+) {
+  class { "jenkins::files":
+    url => $url,
+    email_address => $email_address,
+    slaves => $slaves,
+    views => $views
+  }
+
   include jenkins::files
   include jenkins::package
   include jenkins::service

@@ -17,6 +17,8 @@ node "jenkins-master" {
     ]
   }
 
+  jenkins::plugin { "port-allocator": version => "1.5" }
+
   jenkins::job { "app1_master":
     git_repo => "https://github.com/user/app1",
     git_branch => "master",
